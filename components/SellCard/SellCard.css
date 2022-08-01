@@ -1,0 +1,14 @@
+.sell-card--product,
+.sell-card--price,
+.sell-card--sku {
+  padding: 5px;
+}
+
+.sell-card--sku p {
+  display: inline-block;
+  font-size: 0.7rem;
+  background-color: #dedede;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+}

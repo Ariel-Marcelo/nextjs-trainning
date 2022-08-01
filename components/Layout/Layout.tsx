@@ -5,7 +5,7 @@ import { FC } from "react";
 
 const Layout: FC = ({ children }) => {
   return (
-    <div>
+    <div className="layout">
       <Navbar />
       {children}
       <footer> Este es un footer </footer>

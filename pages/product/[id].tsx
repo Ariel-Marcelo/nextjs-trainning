@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Card } from "@components/Card/Card";
+import { SellCard } from "@components/SellCard";
+import { ProductCard } from "@components/ProductCard";
+import { ProductAttributes } from "@components/ProductAttributes";
+
 
 const ProductPage = () => {
   // state
@@ -20,16 +23,28 @@ const ProductPage = () => {
   }, [id]);
 
   return (
-    <section>
+    <React.Fragment>
       {product && (
-        <Card
-          id={product.id}
-          name={product.name}
-          price={product.price}
-          image={product.image}
-        />
+        <>
+          <ProductCard
+            image={product.image}
+            description={product.attributes.description}
+          >
+            <SellCard
+              id={product.id}
+              name={product.name}
+              price={product.price}
+              sku={product.sku}
+            />
+          </ProductCard>
+          <ProductAttributes
+            shape={product.attributes.shape}
+            hardiness={product.attributes.hardiness}
+            taste={product.attributes.taste}
+          />
+        </>
       )}
-    </section>
+    </React.Fragment>
   );
 };
 

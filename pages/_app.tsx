@@ -2,6 +2,10 @@ import {AppProps} from 'next/app'
 import React from 'react'
 import { Layout } from '../components/Layout/Layout'
 import '../components/Card/Card.css'
+import '../components/SellCard/SellCard.css'
+import '../components/ProductCard/ProductCard.css'
+import '../components/AddToCart/AddToCart.css'
+import '../components/ProductAttributes/ProductAttributes.css'
 import '../global.css'
 
 function MyApp({ Component, pageProps }: AppProps) {

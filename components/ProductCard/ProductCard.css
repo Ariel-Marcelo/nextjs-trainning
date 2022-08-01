@@ -1,0 +1,34 @@
+.product-card {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 300px auto;
+  grid-template-areas: 
+    "image sellCard"
+    "description description";
+}
+
+.product-card img {
+  grid-area: image;
+  height: 100%;
+}
+.product-card__sell-card {
+  grid-area: sellCard;
+  align-items: center;
+}
+
+.product-card__description {
+  grid-area: description;
+}
+
+.product-card__description p {
+  margin-top: 15px;
+}
+
+.product-card__description h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
