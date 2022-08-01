@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "../components/Search/Search";
 import { Card } from "../components/Card/Card";
+import { CardList } from "../components/CardList";
 
 const HomePage = () => {
   // estado que guarda toda la lista de productos
@@ -27,31 +28,37 @@ const HomePage = () => {
       .then((data) => setItemSearched(data));
   }, [idItemSearched]);
 
-  
-
   return (
     <div>
-      <h1> Hola Platzi </h1>
-      <Search setItem={setIdItemSearched} showDeafult={setShowDefault} />
+      <div className="search-zone">
+        <h1> Search Your Product by ID </h1>
+        <Search setItem={setIdItemSearched} showDeafult={setShowDefault} />
+      </div>
+
       {!showDeafult && itemSearched && (
-        <Card
-          id={itemSearched.id}
-          name={itemSearched.name}
-          price={itemSearched.price}
-          image={itemSearched.image}
-        />
+        <CardList>
+          <Card
+            id={itemSearched.id}
+            name={itemSearched.name}
+            price={itemSearched.price}
+            image={itemSearched.image}
+          />
+        </CardList>
       )}
-      {showDeafult &&
-        productList.map((product) => {
-          return (
-            <Card
-              id={product.id}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-            />
-          );
-        })}
+      {showDeafult && (
+        <CardList>
+          {productList.map((product) => {
+            return (
+              <Card
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                image={product.image}
+              />
+            );
+          })}
+        </CardList>
+      )}
     </div>
   );
 };

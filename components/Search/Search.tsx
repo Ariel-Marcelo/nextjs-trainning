@@ -12,9 +12,7 @@ const Search = (props: { showDeafult: (arg0: boolean) => void; setItem: (arg0: s
     props.setItem(event.target.value);
   }
   return (
-    <div>
-      <input onChange={onchange}></input>
-    </div>
+      <input onChange={onchange}></input> 
   );
 }
 

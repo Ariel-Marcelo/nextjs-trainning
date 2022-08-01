@@ -38,3 +38,41 @@ menu a {
   align-self: center;
   
 }
+
+.card-list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 40% 40%;
+  row-gap: 30px;
+  column-gap: 30px;
+  
+}
+
+.search-zone {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.search-zone h1 {
+  margin: 10px;
+}
+
+.search-zone input {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media(max-width: 768px) {
+  .card-list {
+    grid-template-columns: 80%;
+  }
+  .search-zone input {
+    width: 80%;
+  }
+  .search-zone h1 {
+    font-size: x-large;
+  }
+}

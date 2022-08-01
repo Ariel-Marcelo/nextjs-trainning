@@ -3,11 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  height: 30%;
   background-color: #f5f5f5;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: solid 1px #dedede;
   
 }
 

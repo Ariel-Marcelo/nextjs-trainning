@@ -7,4 +7,11 @@ type infoProduct = {
 
 const Sku = ( {name, price}: infoProduct) => {
   return (
-    <React.F
+    <React.Fragment>
+        <div className="card--product"> {name}</div>
+        <div className="card--price"> {price} </div>
+    </React.Fragment>
+  );
+}
+
+export { Sku };
