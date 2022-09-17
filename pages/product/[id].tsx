@@ -5,6 +5,16 @@ import { ProductCard } from "@components/ProductCard";
 import { ProductAttributes } from "@components/ProductAttributes";
 
 
+
+interface CountState {
+  forSale: number;
+}
+type LayoutProps = {
+  children: React.ReactNode;
+  state: CountState;
+}
+
+
 const ProductPage = () => {
   // state
   const [product, setProduct] = useState<TProduct>();
@@ -21,6 +31,9 @@ const ProductPage = () => {
         .then((data) => setProduct(data));
     }
   }, [id]);
+
+
+  
 
   return (
     <React.Fragment>

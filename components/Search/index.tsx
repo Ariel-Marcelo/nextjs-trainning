@@ -16,4 +16,4 @@ const Search = (props: { showDeafult: (arg0: boolean) => void; setItem: (arg0: s
   );
 }
 
-export default Search;
+export { Search };

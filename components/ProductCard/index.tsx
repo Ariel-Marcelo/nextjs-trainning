@@ -1,5 +1,4 @@
 import React from "react";
-
 type ProductCardProps = {
   children: JSX.Element;
   image: string;
@@ -13,7 +12,7 @@ const ProductCard = ({children, image, description}: ProductCardProps) => {
         {children}
       </div>
       <div className="product-card__description">
-        <h3> About this avocado </h3>
+        <h3> About this avocado</h3>
         <hr></hr>
         <p>{description}</p>
       </div>

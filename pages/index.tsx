@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "../components/Search/Search";
-import { Card } from "../components/Card/Card";
+import {Search} from "../components/Search";
+import { Card } from "../components/Card";
 import { CardList } from "../components/CardList";
 
 const HomePage = () => {
@@ -42,6 +42,7 @@ const HomePage = () => {
             name={itemSearched.name}
             price={itemSearched.price}
             image={itemSearched.image}
+            key={itemSearched.id}
           />
         </CardList>
       )}
@@ -54,6 +55,7 @@ const HomePage = () => {
                 name={product.name}
                 price={product.price}
                 image={product.image}
+                key={product.id}
               />
             );
           })}
