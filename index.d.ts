@@ -19,12 +19,20 @@ enum Types {
 type ProductType = {
   id: string;
   count: number;
+  name: string;
+  price: number;
+  image: string;
+  sku: string;
 };
 
 type ProductPayload = {
   [Types.ADD_SHOPPING_CART]: {
     id: string;
     count: number;
+    name: string;
+    price: number;
+    image: string;
+    sku: string;
   };
   [Types.REMOVE_SHOPPING_CART]: {
     id: string;

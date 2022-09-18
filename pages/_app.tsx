@@ -6,6 +6,8 @@ import "../components/SellCard/SellCard.css";
 import "../components/ProductCard/ProductCard.css";
 import "../components/AddToCart/AddToCart.css";
 import "../components/ProductAttributes/ProductAttributes.css";
+import "../components/DispatchToCart/DispatchToCart.css";
+import "../components/ProductDescription/ProductDescription.css";
 import "../global.css";
 import { GlobalCountProvider } from "@components/Context";
 

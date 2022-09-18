@@ -2,13 +2,13 @@ import React from "react";
 import { AddToCart } from "../AddToCart";
 
 type AppProps = {
-  id: string;
   name: string;
   price: number;
   sku: string;
+  children: JSX.Element;
 };
 
-const SellCard = ({ id, name, price, sku }: AppProps): JSX.Element => {
+const SellCard = ({ name, price, sku, children }: AppProps): JSX.Element => {
   return (
     <React.Fragment>
       <div className="sell-card--product">
@@ -20,7 +20,7 @@ const SellCard = ({ id, name, price, sku }: AppProps): JSX.Element => {
         {" "}
         <p> SKU: {sku} </p>
       </div>
-      <AddToCart id= {id} />
+      {children}
     </React.Fragment>
   );
 };

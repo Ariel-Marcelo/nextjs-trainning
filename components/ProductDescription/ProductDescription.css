@@ -1,0 +1,16 @@
+.product-card__description {
+  margin: auto;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.product-card__description p {
+  margin-top: 15px;
+}
+
+.product-card__description h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
